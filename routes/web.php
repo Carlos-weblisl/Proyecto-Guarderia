@@ -11,6 +11,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\NinoController;
 use App\Http\Controllers\PersonalController;
+use App\Http\Controllers\BoletoController;
 
 
 // Ruta principal (Login)
@@ -31,7 +32,7 @@ Route::post('register', [RegisterController::class, 'register'])->name('register
 
 // Middleware para proteger todas las rutas de usuarios autenticados
 Route::middleware(['auth'])->group(function () {
-    
+
     // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
@@ -78,3 +79,7 @@ Route::middleware(['auth', 'administrador'])->group(function () {
 });
 
 });
+
+//BoletoController
+Route::get('/boleto/create/{section}', [BoletoController::class, 'create'])->name('boleto.create');
+Route::post('/boleto/{section}', [BoletoController::class, 'store'])->name('boleto.store');
