@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+    background-color: #e0f7fa;
+    font-family: 'Comic Neue', cursive;
+    color: #333;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    max-width: 900px;
+  }
+  
+  /* Estilizando la tarjeta de registro */
+  .shadow-lg {
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Sección izquierda del formulario */
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  /* Sección derecha del formulario */
+  .right-section {
+    background: linear-gradient(135deg, #b2ebf2, #e0f7fa);
+    color: #00796b;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  /* Título del panel derecho */
+  .right-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Texto del panel derecho */
+  .right-section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Inputs */
+  .form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #b2ebf2;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #0097a7;
+    box-shadow: 0px 0px 6px rgba(0, 151, 167, 0.5);
+  }
+  
+  /* Selector de rol */
+  .form-select {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #b2ebf2;
+    transition: all 0.3s ease;
+  }
+  
+  .form-select:focus {
+    border-color: #0097a7;
+    box-shadow: 0px 0px 6px rgba(0, 151, 167, 0.5);
+  }
+  
+  /* Botón de registro */
+  .btn-primary {
+    background-color: #0097a7;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #006064;
+  }
+  
+  /* Enlace de iniciar sesión */
+  .text-decoration-none {
+    color: #00796b;
+    font-weight: 500;
+  }
+  
+  .text-decoration-none:hover {
+    text-decoration: underline;
+  }
+  
+  /* Errores */
+  .text-danger {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  

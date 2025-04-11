@@ -1,0 +1,128 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: black; /* Todas las letras en negro */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #E0F7FF; /* Fondo celeste claro */
+}
+
+/* Sección del formulario */
+.login-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+}
+
+.login-section img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.login-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-section label {
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+}
+
+.login-section input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #00BFFF; /* Borde celeste */
+    border-radius: 5px;
+    background-color: #F0FAFF; /* Fondo celeste muy claro */
+}
+
+/* Botón de ingresar */
+.login-section .btn-ingresar {
+    width: 100%;
+    padding: 10px;
+    background: #FFD700; /* Amarillo */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.login-section .btn-ingresar:hover {
+    background: #e6c200;
+}
+
+/* Botón de registro */
+.login-section .register-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-section .register-link a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-section .register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    width: 50%;
+    background: linear-gradient(to bottom right, #00BFFF, #80DFFF, #33A3FF, #66C2FF);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: rgb(251, 251, 0);
+}
+
+.welcome-section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.welcome-section h2 span {
+    color: #FFD700;
+    font-style: italic;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .login-section, .welcome-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .welcome-section {
+        padding: 20px;
+    }
+}

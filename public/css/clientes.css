@@ -1,0 +1,79 @@
+/* GENERAL */
+body {
+  background: linear-gradient(135deg, #00b4d8, #0077b6); /* Gradiente azul */
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  color: #000; /* Color negro para el texto */
+  margin: 0;
+  padding: 0;
+}
+
+/* BARRA SUPERIOR */
+.barra-superior {
+  background-color: #00b4d8;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.barra-superior .logo {
+  color: #ffeb3b; /* Amarillo */
+  font-weight: 700; /* Aumenté el peso de la fuente para hacerlo más ancho */
+  font-size: 2rem; /* Aumenté el tamaño de la fuente */
+  text-decoration: none;
+}
+
+.barra-superior .logo i {
+  color: green; /* La segunda "i" en verde */
+}
+
+/* TÍTULOS */
+.titulo {
+  color: #ffeb3b; /* Amarillo */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 700; /* Aumenté el peso de la fuente para hacerlo más ancho */
+  font-size: 2.5rem; /* Aumenté el tamaño de la fuente */
+}
+
+/* CLIENTES */
+.clientes {
+  color: #ffeb3b; /* Amarillo */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* TABLE */
+.table th, .table td {
+  text-align: center;
+}
+
+/* BOTONES */
+.btn-editar, .btn-eliminar {
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-editar {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.btn-editar:hover {
+  background-color: #008ba3;
+}
+
+.btn-eliminar {
+  background-color: #ff7043;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background-color: #e64a19;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .table-responsive {
+    font-size: 14px;
+  }
+}
