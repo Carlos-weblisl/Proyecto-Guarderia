@@ -50,11 +50,12 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#">Servicios</a>
-              <ul>
-                <li><a href="{{ url('/alquiler/individual') }}">Individual</a></li>
-                <li><a href="{{ url('/alquiler/empresarial') }}">Empresarial</a></li>
-              </ul>
+                <a href="#">Servicios</a>
+                <ul class="submenu">
+                <li><a href="{{ route('boleto.create', 'mixta') }}">Sección Mixta</a></li>
+                <li><a href="{{ route('boleto.create', 'Divertiyan') }}">Sección Divertiyan</a></li>
+                <li><a href="{{ route('boleto.create', 'Divertiti') }}">Sección Divertiti</a></li>
+                </ul>
             </li>
           @endif
 
