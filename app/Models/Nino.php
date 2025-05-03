@@ -46,9 +46,9 @@ class Nino extends Model
         return now()->diffInYears($this->fecha_nacimiento);
     }
 
-    // Relación con el Tutor (si existe una tabla 'tutores')
-    public function tutor()
+    // Relación con el Cliente (padre o tutor)
+    public function cliente()
     {
-        return $this->belongsTo(Tutor::class, 'dni_tutor', 'dni');
+        return $this->belongsTo(Cliente::class, 'cliente_id', 'id');
     }
 }

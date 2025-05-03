@@ -9,8 +9,9 @@ class Cliente extends Model
     use HasFactory;
     protected $fillable = ['nombre', 'direccion', 'telefono', 'email', 'tipo_documento', 'numero_documento', 'numero_ruc', 'forma_pago', 'distrito', 'departamento', 'provincia'];
 
+    // Relación de uno a muchos con la tabla 'ninos'a
     public function hijos()
     {
-        return $this->hasMany(Niño::class);
+        return $this->hasMany(Nino::class, 'cliente_id', 'id');
     }
 }

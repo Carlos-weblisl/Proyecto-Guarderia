@@ -28,28 +28,30 @@ class ClienteController extends Controller
      * Almacena un nuevo cliente en la base de datos.
      */
     public function store(Request $request)
-    {
-        $request->validate([
-            'nombre'        => 'required|string|max:255',
-            'direccion'     => 'nullable|string|max:255',
-            'telefono'      => 'nullable|string|max:20|regex:/^\+?\d{7,20}$/',
-            'email'         => 'required|email|unique:clientes,email|max:255',
-            'tipo_documento'=> 'nullable|string|in:DNI,RUC,Pasaporte',
-            'numero_ruc'    => 'nullable|string|max:20|unique:clientes,numero_ruc',
-            'forma_pago'    => 'nullable|string|in:Efectivo,Tarjeta,Transferencia',
-            'distrito'      => 'nullable|string|max:255',
-            'departamento'  => 'nullable|string|max:255',
-            'provincia'     => 'nullable|string|max:255',
-        ]);
+{
+    $request->validate([
+        'nombre'         => 'required|string|max:255',
+        'direccion'      => 'nullable|string|max:255',
+        'telefono'       => 'nullable|string|max:20|regex:/^\+?\d{7,20}$/',
+        'email'          => 'required|email|unique:clientes,email|max:255',
+        'tipo_documento' => 'nullable|string|in:DNI,RUC,Pasaporte',
+        'numero_ruc'     => 'nullable|string|max:20|unique:clientes,numero_ruc',
+        'forma_pago'     => 'nullable|string|in:Efectivo,Tarjeta,Transferencia',
+        'distrito'       => 'nullable|string|max:255',
+        'departamento'   => 'nullable|string|max:255',
+        'provincia'      => 'nullable|string|max:255',
+    ]);
 
-        Cliente::create($request->only([
-            'nombre', 'direccion', 'telefono', 'email',
-            'tipo_documento', 'numero_ruc', 'forma_pago',
-            'distrito', 'departamento', 'provincia'
-        ]));
+    Cliente::create($request->only([
+        'nombre','direccion','telefono','email',
+        'tipo_documento','numero_ruc','forma_pago',
+        'distrito','departamento','provincia'
+    ]));
 
-        return redirect()->route('clientes.index')->with('success', 'Cliente registrado correctamente.');
-    }
+    // <-- Aquí el cambio clave: volver a la misma página en vez de ir a clientes.index
+    return back()->with('success', 'Registro de cliente completo');
+}
+
 
     /**
      * Muestra el formulario de edición de un cliente.
